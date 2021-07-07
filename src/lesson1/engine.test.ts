@@ -1,7 +1,7 @@
 import { firstPrioritiesCalc, secondPrioritiesCalc } from "./engine";
 
 describe("Первый приоритет", () => {
-    it("[3 / 2]", () => {
+    it("[6 / 2]", () => {
         expect(firstPrioritiesCalc([6, "/", 2])).toEqual([3]);
     })
 })

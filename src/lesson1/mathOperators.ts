@@ -1,19 +1,19 @@
 export type MathOperationType = (first: number, second: number) => number;
 
 // записываем функции, которые будут в нашем калькуляторе
-export const sum : MathOperationType = ( (first, second) : number => {
+export const sum : MathOperationType = ( (first, second) => {
     return first + second
 } )
 
-export const minus : MathOperationType = ( (first, second) : number => {
+export const minus : MathOperationType = ( (first, second) => {
     return first - second
 } )
 
-export const mul : MathOperationType = ( (first, second) : number => {
+export const mul : MathOperationType = ( (first, second) => {
     return first * second
 } )
 
-export const div : MathOperationType = ( (first, second) : number => {
+export const div : MathOperationType = ( (first, second) => {
     return first / second
 } )
 
