@@ -8,7 +8,8 @@
     "calc": "npx ts-node src/lesson1",
     "build": "webpack --mode production",
     "test": "jest",
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx --fix src/"
+    "lint": "eslint",
+    "prepare": "husky install"
   },
   "husky": {
     "hooks": {
@@ -18,13 +19,10 @@
   "lint-staged": {
     "*.{ts,js}": [
       "prettier --write --config .prettierr.yaml",
-      "tslint --project tslint.ide_only.json --fix --force",
-      "sh lint.sh partner-account",
-      "git add"
+      "eslint --project tslint.ide_only.json --fix --force"
     ],
     "*.{html,scss,css}": [
-      "prettier --write --config .prettierr.yaml",
-      "git add"
+      "prettier --write --config .prettierr.yaml"
     ]
   },
   "repository": {
@@ -45,10 +43,11 @@
     "eslint": "^7.25.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
-    "husky": "^6.0.0",
+    "husky": "^7.0.0",
     "jest": "^26.6.3",
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
+    "pretty-quick": "^3.1.1",
     "ts-node": "^10.0.0",
     "typescript": "^4.2.4",
     "webpack": "^5.36.0",
